@@ -57,7 +57,8 @@ const deleteClient = (index) => {
 
 
 // Pegando valores do LocalStorage e estruturando tabela conforme seus dados
-const createRow = (client) => {
+// Ele recebe os valores de cada linha alem do indice de identificacao para os actions correspondente aquela row
+const createRow = (client, index) => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = `
     <td>${client.nome}</td>
@@ -65,8 +66,8 @@ const createRow = (client) => {
     <td>${client.celular}</td>
     <td>${client.cidade}</td>
     <td>
-        <button type="button" class="button green">editar</button>
-        <button type="button" class="button red">excluir</button>
+        <button type="button" class="button green" id="edit-${index}" >Editar</button>
+        <button type="button" class="button red" id="delete-${index}">Excluir</button>
     </td>
     `
     // Criando a visualização da tabela no HTML e inserindo o newRow
@@ -95,6 +96,16 @@ const isValidFields = () => {
 
 }
 
+// Após clicar em editar, o form vai ser preenchido com as info do cliente a ser editado
+const fillFields = (client) => {
+    document.getElementById('name').value = client.nome
+    document.getElementById('email').value = client.email
+    document.getElementById('cellphone').value = client.celular
+    document.getElementById('city').value = client.cidade
+    // Retirando o dataset new para indicar que é o form de edição
+    document.getElementById('name').dataset.index = client.index
+};
+
 // Interação com o Layout
 const saveClient = () => {
     if (isValidFields()) {
@@ -105,16 +116,43 @@ const saveClient = () => {
             celular: document.getElementById('cellphone').value,
             cidade: document.getElementById('city').value,
         }
+        // Identificando se é um novo usuario ou editar um cliente
+        const index = document.getElementById('name').dataset.index;
+        if (index == 'new') {
         // Utilizando a função do createCliente
         createClient(client);
         alert('Seu usuário foi criado com sucesso!')
         updateTable()
-        closeModal()
+        closeModal()            
+        } else {
+            updateClient(index, client)
+            updateTable()
+            closeModal()
+        }
+
     }
 }
 
+// Editando o cliente atraves da função do readClient e pedindo para carregar somente o valor do index que foi recebido no parametro, ou seja, no botao clicado correspondente da linha do cliente editado
+const editClient = (index) => {
+    const client = readClient()[index];
+    client.index = index
+    fillFields(client);
+    openModal();
+}
+
 const editOrDelete = ( event ) => {
-    console.log(event)
+    // Para pegar o botão de edit e delete, estou utilizando o event que esta acontecendo dentro do tbody, o target é aonde estou clicando e o type para filtrar somente pelo botão
+    if(event.target.type == 'button'){
+        // Aqui estou pegando o valor atributo personalizado para os botaos e separando o action e o index correspondente em dois elementos em um array com o action e o index
+        const [action, index] = event.target.id.split('-')
+        
+        if(action == 'edit'){
+            editClient(index)
+        } else {
+            console.log('Deletando o cliente do index', index)
+        }
+    }
 }
 
 
@@ -127,6 +165,9 @@ document.getElementById('modalClose')
 
 document.getElementById('save')
     .addEventListener('click', saveClient)
+
+document.getElementById('cancel')
+    .addEventListener('click', closeModal)
 
 document.querySelector('#tableClient>tbody')
     .addEventListener('click', editOrDelete)
