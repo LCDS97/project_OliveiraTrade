@@ -55,6 +55,39 @@ const deleteClient = (index) => {
     setLocalStorage(dbClient)
 }
 
+
+// Pegando valores do LocalStorage e estruturando tabela conforme seus dados
+const createRow = (client) => {
+    const newRow = document.createElement('tr')
+    newRow.innerHTML = `
+    <td>${client.nome}</td>
+    <td>${client.email}</td>
+    <td>${client.celular}</td>
+    <td>${client.cidade}</td>
+    <td>
+        <button type="button" class="button green">editar</button>
+        <button type="button" class="button red">excluir</button>
+    </td>
+    `
+    // Criando a visualização da tabela no HTML e inserindo o newRow
+    document.querySelector('#tableClient>tbody').appendChild(newRow)
+}
+
+const clearTable = () => {
+    const rows = document.querySelectorAll('#tableClient>tbody tr')
+    // Pegando o tbody e removendo o filho dele, nesse caso, a própria linha
+    rows.forEach(row => row.parentNode.removeChild(row))
+}
+
+// Atualizando Tabela ao carregar página
+const updateTable = () => {
+    const dbClient = readClient()
+    clearTable();
+    // Lendo o localStorage e criando uma linha para cada cliente
+    dbClient.forEach(createRow)
+}
+updateTable()
+
 // Validações do Form
 const isValidFields = () => {
     // Verificando se as regras no HTML estão sendo cumpridas
@@ -75,33 +108,15 @@ const saveClient = () => {
         // Utilizando a função do createCliente
         createClient(client);
         alert('Seu usuário foi criado com sucesso!')
+        updateTable()
         closeModal()
     }
 }
 
-const createRow = (client) => {
-    const newRow = document.createElement('tr')
-    newRow.innerHTML = `
-    <td>${client.nome}</td>
-    <td>${client.email}</td>
-    <td>${client.celular}</td>
-    <td>${client.cidade}</td>
-    <td>
-        <button type="button" class="button green">editar</button>
-        <button type="button" class="button red">excluir</button>
-    </td>
-    `
-    // Criando a visualiza;'a
-    document.querySelector('#tableClient>tbody').appendChild(newRow)
+const editOrDelete = ( event ) => {
+    console.log(event)
 }
 
-// Atualizando Tabela ao carregar página
-const updateTable = () => {
-    const dbClient = readClient()
-    // Lendo o localStorage e criando uma linha para cada cliente
-    dbClient.forEach(createRow)
-}
-updateTable()
 
 // Eventos
 document.getElementById('cadastrarCliente')
@@ -112,3 +127,7 @@ document.getElementById('modalClose')
 
 document.getElementById('save')
     .addEventListener('click', saveClient)
+
+document.querySelector('#tableClient>tbody')
+    .addEventListener('click', editOrDelete)
+
