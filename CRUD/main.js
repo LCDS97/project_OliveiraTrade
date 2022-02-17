@@ -150,7 +150,14 @@ const editOrDelete = ( event ) => {
         if(action == 'edit'){
             editClient(index)
         } else {
-            console.log('Deletando o cliente do index', index)
+            // Puxando nome do cliente com a função ReadClient
+            const client = readClient()[index]
+            // Utilizando do template literal para confirmação de exclusao do client
+            const response = confirm(`Deseja realmente excluir o cliente ${client.nome}`)
+            if(response){
+                deleteClient(index)
+                updateTable()
+            }
         }
     }
 }
