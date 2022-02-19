@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h1 {
+  border: bottom 2px;
+}
+
 :root{
     --primary-color: #FFBA00;
     --secundary-color: #FFF1CC;
