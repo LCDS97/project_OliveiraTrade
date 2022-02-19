@@ -1,10 +1,11 @@
 import localStorage from './localStorage';
 import modal from './modal';
+import { Client } from './@types';
 
 const { readClient, createClient, updateClient, deleteClient } = localStorage;
 const { closeModal, openModal, fillFields } = modal;
 
-import { Client} from './@types';
+
 // Validações do Form
 const isValidFields = () => {
     // Verificando se as regras no HTML estão sendo cumpridas
@@ -69,7 +70,7 @@ const editClient = (index: number) => {
     openModal();
 }
 
-const editOrDelete = (event: { target : HTMLButtonElement} ) => {
+const editOrDelete = (event: any) => {
     // Para pegar o botão de edit e delete, estou utilizando o event que esta acontecendo dentro do tbody, o target é aonde estou clicando e o type para filtrar somente pelo botão
     if(event.target.type == 'button'){
         // Aqui estou pegando o valor atributo personalizado para os botaos e separando o action e o index correspondente em dois elementos em um array com o action e o index
@@ -79,9 +80,9 @@ const editOrDelete = (event: { target : HTMLButtonElement} ) => {
             editClient(Number(index))
         } else {
             // Puxando nome do cliente com a função ReadClient
-            const client = readClient()[index]
+            const client: Client = readClient()[index]
             // Utilizando do template literal para confirmação de exclusao do client
-            const response = confirm(`Deseja realmente excluir o cliente ${client.nome}`)
+            const response = confirm(`Deseja realmente excluir o cliente ${client.name}`)
             if(response){
                 deleteClient(Number(index))
                 updateTable()
@@ -108,4 +109,4 @@ const createRow = (client : Client, index: number) => {
     document.querySelector('#tableClient>tbody')?.appendChild(newRow)
 }
 
-export default { saveClient, editOrDelete }
+export default { saveClient, editOrDelete, updateTable }
