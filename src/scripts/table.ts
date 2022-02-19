@@ -35,7 +35,7 @@ const saveClient = () => {
     if (isValidFields()) {
         const name = document.getElementById('name') as HTMLInputElement
         const email = document.getElementById('email') as HTMLInputElement
-        const phone = document.getElementById('cellphone') as HTMLInputElement
+        const phone = document.getElementById('phone') as HTMLInputElement
         const city = document.getElementById('city') as HTMLInputElement
         // Pegando valores do form após a validação
         const client = {

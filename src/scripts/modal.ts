@@ -23,7 +23,7 @@ const closeModal = () => {
 const fillFields = (client: Client) => {
     const name = document.getElementById('name') as HTMLInputElement
     const email = document.getElementById('email') as HTMLInputElement
-    const phone = document.getElementById('cellphone') as HTMLInputElement
+    const phone = document.getElementById('phone') as HTMLInputElement
     const city = document.getElementById('city') as HTMLInputElement
     name.value = client.name
     email.value = client.email

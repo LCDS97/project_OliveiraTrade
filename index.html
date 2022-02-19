@@ -10,7 +10,26 @@
     <header>
         <h1 class="header-title">Cadastro de Clientes</h1>
     </header>
-    <main>
+    <main id="login">
+        <form id="signUpForm">
+            <input id="user-name" type="text" class="modal-field" placeholder="Nome Completo" required>
+            <input id="user-email" type="text" class="modal-field" placeholder="Email" required>
+            <input id="tax-id" type="text" class="modal-field" placeholder="CPF" required>
+            <input id="user-pass" type="text" class="modal-field" placeholder="Senha" required>
+            <input id="confirmPass" type="text" class="modal-field" placeholder="Confirmar Senha" required>
+            <button type="button" class="button blue" id="signInButton">Criar Usuário</button>
+            <a href="#">Voltar</a>
+            </form>
+
+
+        <form id="signInForm">
+        <input id="user-email" type="text" class="modal-field" placeholder="Email" required>
+        <input id="password" type="text" class="modal-field" placeholder="Senha" required>
+        <button type="button" class="button blue" id="signUpButton">Logar</button>
+        <a href="#">Novo por aqui?</a>
+        </form>
+    </main>
+    <main id="app">
         <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
         <table id="tableClient" class="records">
             <thead>
@@ -33,36 +52,20 @@
                     <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
                 <form id="form" class="modal-form">
-                    <input id="name" type="text" data-index="new" class="modal-field" placeholder="Nome do Cliente" required>
-                    <input id="email" type="email" class="modal-field" placeholder="e-mail do Cliente" required>
-                    <input id="cellphone" type="text" class="modal-field" placeholder="Telefone do Cliente" required>
-                    <input id="city" type="text" class="modal-field" placeholder="Cidade do Cliente" required>
+                    <input id="name" type="text" data-index="new" class="modal-field" placeholder="Nome Completo" required>
+                    <input id="email" type="email" class="modal-field" placeholder="E-mail" required>
+                    <input id="phone" type="number" class="modal-field" placeholder="CPF" required>
+                    <input id="city" type="password" class="modal-field" placeholder="Senha" required>
                 </form>
                 <footer class="modal-footer">
                     <button id="save" class="button green">Salvar</button>
-                    <button id="cancel" class="button blue">Cancelar</button>
+                    <button id="cancel" class="button red">Cancelar</button>
+                    <button id="forgot" class="button blue">Esqueceu a senha?</button>
                 </footer>
             </div>
         </div>
     </main>
-    <main>
-        <form id="signInForm">
-            <input id="user-name" type="text" class="modal-field" placeholder="Nome Completo" required>
-            <input id="user-email" type="text" class="modal-field" placeholder="Email" required>
-            <input id="tax-id" type="text" class="modal-field" placeholder="CPF" required>
-            <input id="user-pass" type="text" class="modal-field" placeholder="Senha" required>
-            <input id="confirmPass" type="text" class="modal-field" placeholder="Confirmar Senha" required>
-            <button type="button" class="button blue" id="signInButton">Logar</button>
-            </form>
 
-
-        <form id="signUpForm">
-        <input id="user-email" type="text" class="modal-field" placeholder="Email" required>
-        <input id="password" type="text" class="modal-field" placeholder="Senha" required>
-        <button type="button" class="button blue" id="signUpButton">Logar</button>
-        <a href="#">Esqueceu sua senha?</a>
-        </form>
-    </main>
     <footer>
 
     </footer>
