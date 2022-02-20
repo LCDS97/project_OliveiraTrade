@@ -21,7 +21,7 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 >EsLint: é uma ferramenta de análise de código aonde juntamente com sua extensão permite identificar erros quanto ao padrão de escrita que definimos, proporcionando organização e padronização ao código
 >> Build Tool Vite: É um bundler e um dev-server que consegue usar compiladores e frameworks direto, sem configuração, combinam os diferentes módulos da sua aplicação em um arquivo que você consiga usar em ambiente de produção.
 
-:warning: **Informações**
+:warning: **Armazenamento de Dados**
 
 - LocalStorage
 > O projeto consiste em armazenar os dados dos clientes cadastrados no LocalStorage
@@ -60,8 +60,10 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 
 ---
 
-### :eyes: Curiosidades
+### 
 
+### :eyes: Formas de me encontrar
+:checkered_flag: Meu Linkedin [Linkedin](https://www.linkedin.com/in/lucas-conceição-dos-santos-52481216b/)
 :checkered_flag: Também estudando a plataforma do **Salesforce**, caso queira da uma olhada no meu perfil do [Trailhead](https://trailblazer.me/id/lcds1997)😉
 ---
 ![Trailhead](assets/TrailheadProfile.png)
