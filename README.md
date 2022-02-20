@@ -27,6 +27,7 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 > O projeto consiste em armazenar os dados dos clientes cadastrados no LocalStorage
 >> As consultas em relação ao login e cadastro são feitas através da conversão de string para um array para manipulação no projeto e conversão de um array para string para armazenamento no LocalStorage 
 
+---
 
 ### Layout do Projeto
 ![Layout](assets/Telas.png)
@@ -42,6 +43,8 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 - ☑️ Exibição de todos os usuários cadastrado no LocalStorage
 - ☑️ Operações de edição e exclusão para cada cliente armazenado no LocalStorage
 
+---
+
 ## :writing_hand: Informações
 
 ### :rocket: Execução
@@ -55,9 +58,12 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 #### 📁 Estrutura e organização do código e dos arquivos
 ![Estrutura](assets/Estrutura.png)
 
+---
+
 ### :eyes: Curiosidades
 
-Estou desde setembro estudando a plataforma do Salesforce, caso queira da uma olhada no meu perfil do [Trailhead](https://trailblazer.me/id/lcds1997) 😉
+:checkered_flag: Também estudando a plataforma do **Salesforce**, caso queira da uma olhada no meu perfil do [Trailhead](https://trailblazer.me/id/lcds1997)😉
+---
 ![Trailhead](assets/TrailheadProfile.png)
 
 
