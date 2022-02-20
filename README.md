@@ -52,5 +52,12 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 `npm run dev`
 > Para rodar o projeto localmente, nele antes é inicilizado o server do bundle do Vite, e logo em seguida o servidor referente ao ambiente de desenvolvimento.
 
+#### 📁 Estrutura e organização do código e dos arquivos
+![Estrutura](assets/Estrutura.png)
+
+### Curiosidades
+
+Estou desde setembro estudando a plataforma do Salesforce, caso queira da uma olhada no meu perfil do Trailhead 😉
+![Trailhead](assets/TrailheadProfile.png)
 
 
