@@ -1,7 +1,7 @@
 import localStorage from "./localStorage";
 
-import { CheckInput, Client } from "./@types";
-const { readClient, createClient } = localStorage;
+import { CheckInput } from "./@types";
+const { readClient } = localStorage;
 
 const checkInput = ({ inputEmail, inputPassword }: CheckInput) => {
   const allClients = readClient();

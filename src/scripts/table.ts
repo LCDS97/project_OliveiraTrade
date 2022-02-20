@@ -5,7 +5,6 @@ import { Client } from "./@types";
 const { readClient, createClient, updateClient, deleteClient } = localStorage;
 const { closeModal, openModal, fillFields } = modal;
 
-import { cpf } from "cpf-cnpj-validator";
 
 // Validações do Form
 const isValidFields = () => {
