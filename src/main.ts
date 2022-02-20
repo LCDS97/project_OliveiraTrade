@@ -4,7 +4,7 @@ import "./css/modal.css";
 import "./css/records.css";
 import "./css/login.css";
 
-import { modal, table } from "./scripts";
+import { modal, table, register } from "./scripts";
 
 interface ToggleElements {
   elem1: HTMLFormElement | HTMLDivElement;
@@ -19,6 +19,7 @@ const addEventListeners = () => {
   ) as HTMLDivElement;
   const modalClose = document.getElementById("modalClose") as HTMLDivElement;
   const saveClient = document.getElementById("save") as HTMLDivElement;
+  const saveUser = document.getElementById("signUpButton") as HTMLDivElement;
   const cancel = document.getElementById("cancel") as HTMLDivElement;
   const editOrDelete = document.querySelector(
     "#tableClient>tbody"
@@ -27,6 +28,7 @@ const addEventListeners = () => {
   createClient.addEventListener("click", modal.openModal);
   modalClose.addEventListener("click", modal.closeModal);
   saveClient.addEventListener("click", table.saveClient);
+  saveUser.addEventListener("click", register.saveNewUser);
   cancel.addEventListener("click", modal.closeModal);
   editOrDelete.addEventListener("click", table.editOrDelete);
 };

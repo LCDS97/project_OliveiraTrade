@@ -23,12 +23,12 @@ const closeModal = () => {
 const fillFields = (client: Client) => {
     const name = document.getElementById('name') as HTMLInputElement
     const email = document.getElementById('email') as HTMLInputElement
-    const phone = document.getElementById('phone') as HTMLInputElement
-    const city = document.getElementById('city') as HTMLInputElement
+    const taxId = document.getElementById('taxId') as HTMLInputElement
+    const password = document.getElementById('password') as HTMLInputElement
     name.value = client.name
     email.value = client.email
-    phone.value = client.phone
-    city.value = client.city
+    taxId.value = client.taxId
+    password.value = client.password
     // Retirando o dataset new para indicar que é o form de edição
     name.dataset.index = client.index
 };
