@@ -1,9 +1,14 @@
 type Client = {
     name: string,
     email: string,
-    phone: string,
-    city: string,
+    taxId: string,
+    password: string,
     index? : string
 }
 
-export { Client }
+type CheckInput = {
+    inputEmail: HTMLInputElement,
+    inputPassword: HTMLInputElement
+}
+
+export { Client, CheckInput }
