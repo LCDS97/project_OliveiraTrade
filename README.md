@@ -35,14 +35,22 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 
 ## 📜 Regras de Negócio
 
-☑️ - Criação de usuário no sistema
-☑️ - Campos mínimos de cadastro normal para Pessoa Física *(Nome,E-mail,CPF,Senha)*
-☑️ - Login de usuário
-☑️ - Validação de usuário no LocalStorage
-☑️ - Exibição de todos os usuários cadastrado no LocalStorage
-☑️ - Operações de edição e exclusão para cada cliente armazenado no LocalStorage
+- ☑️ Criação de usuário no sistema
+- ☑️ Campos mínimos de cadastro normal para Pessoa Física *(Nome,E-mail,CPF,Senha)*
+- ☑️ Login de usuário
+- ☑️ Validação de usuário no LocalStorage
+- ☑️ Exibição de todos os usuários cadastrado no LocalStorage
+- ☑️ Operações de edição e exclusão para cada cliente armazenado no LocalStorage
 
+## :writing_hand: Informações
 
+### :rocket: Execução
+
+`npm install`
+> Instalar as depedências do projeto para serem utilizadas as ferramentas disponiveis no mesmo
+
+`npm run dev`
+> Para rodar o projeto localmente, nele antes é inicilizado o server do bundle do Vite, e logo em seguida o servidor referente ao ambiente de desenvolvimento.
 
 
 
