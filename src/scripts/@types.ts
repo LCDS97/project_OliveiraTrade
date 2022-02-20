@@ -6,4 +6,9 @@ type Client = {
     index? : string
 }
 
-export { Client }
+type CheckInput = {
+    inputEmail: HTMLInputElement,
+    inputPassword: HTMLInputElement
+}
+
+export { Client, CheckInput }

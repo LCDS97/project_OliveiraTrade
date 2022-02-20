@@ -4,7 +4,7 @@ import "./css/modal.css";
 import "./css/records.css";
 import "./css/login.css";
 
-import { modal, table, register } from "./scripts";
+import { modal, table, register, login } from "./scripts";
 
 interface ToggleElements {
   elem1: HTMLFormElement | HTMLDivElement;
@@ -48,16 +48,19 @@ const toggleElements = ({ elem1, elem2, linkIn, linkOut }: ToggleElements) => {
 const validateBtn = (loginButton: HTMLButtonElement) => {
   const inputEmail = document.querySelector('#login-email') as HTMLInputElement;
   const inputPassword = document.querySelector('#login-password') as HTMLInputElement;
+
+
+
   
-  const checkLogin =  () => {
-    // se usuario estiver registrado no local storage, sera validado com if alterando a propriedade do button para false
-    loginButton.disabled = false
+  const checkInput = () => {
+    // se usuario estiver registrado no local storage, sera validado com if alterando a propriedade do button para false     
+      const isLoginValid = login.checkInput({inputEmail, inputPassword})
+      if(isLoginValid) loginButton.disabled = false
   }
 
-
   loginButton.disabled = true;
-  inputEmail.addEventListener('input', checkLogin);
-  inputPassword.addEventListener('input', checkLogin);
+  inputEmail.addEventListener('input', checkInput);
+  inputPassword.addEventListener('input', checkInput);
 }
 
 window.onload = () => {

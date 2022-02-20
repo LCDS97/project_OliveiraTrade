@@ -7,7 +7,7 @@ const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client') || '[
 const setLocalStorage = (dbClient: Client[]) => localStorage.setItem('db_client', JSON.stringify(dbClient));
 
 // READ - Somente lê os dados que estão no localStorage
-const readClient = () => getLocalStorage()
+const readClient = (): Client[] => getLocalStorage()
 
 
 
@@ -23,7 +23,7 @@ const createClient = ( client: Client ) => {
 
 // UPDATE - Pegando o valor do indice do Cliente que eu quero editar, assim ele vai atualizar o index aonde se encontra as info atuais e atualizar pelas que recebeu do parametro client
 
-const updateClient = ( index: number | string, client: Client ) => {
+const updateClient = ( index: any, client: Client ) => {
     const dbClient = readClient()
     dbClient[index] = client
     setLocalStorage(dbClient)
@@ -31,7 +31,7 @@ const updateClient = ( index: number | string, client: Client ) => {
 }
 
 // DELETE - Pegando o valor do indice e excluindo a partir dele
-const deleteClient = (index: number) => {
+const deleteClient = (index: any) => {
     const dbClient = readClient()
     dbClient.splice(index, 1)
     setLocalStorage(dbClient)
