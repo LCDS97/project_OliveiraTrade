@@ -55,7 +55,7 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 #### 📁 Estrutura e organização do código e dos arquivos
 ![Estrutura](assets/Estrutura.png)
 
-### Curiosidades
+### :eyes: Curiosidades
 
 Estou desde setembro estudando a plataforma do Salesforce, caso queira da uma olhada no meu perfil do Trailhead 😉
 ![Trailhead](assets/TrailheadProfile.png)
