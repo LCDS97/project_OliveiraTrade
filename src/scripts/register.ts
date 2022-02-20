@@ -1,7 +1,6 @@
 import localStorage from "./localStorage";
-import { cpf } from "cpf-cnpj-validator";
 
-const { readClient, createClient } = localStorage;
+const { createClient } = localStorage;
 
 const isValidFields = () => {
   // Verificando se as regras no HTML estão sendo cumpridas
@@ -20,8 +19,7 @@ const saveNewUser = () => {
     const signIn = document.querySelector("#signInForm") as HTMLFormElement;
     const signUp = document.querySelector("#signUpForm") as HTMLFormElement;
     // Pegando valores do form após a validação
-    //cpf.format(taxId.value)
-    console.log(cpf);
+
     const client = {
       name: name.value,
       email: email.value,
