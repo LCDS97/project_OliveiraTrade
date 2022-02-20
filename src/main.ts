@@ -38,12 +38,15 @@ const toggleElements = ({ elem1, elem2, linkIn, linkOut }: ToggleElements) => {
   const toggleElemClass = () => {
     elem1.classList.toggle("hiddenForm");
     elem2.classList.toggle("hiddenForm");
+    linkIn.classList.toggle("hiddenForm");
+    linkOut.classList.toggle("hiddenForm");
+    if(linkIn.id === 'signInButton') table.updateTable(); 
   };
   // Definindo a classe hiddenForm no carregamento da página para esconder o SignUp e ao clicar troca a classe entre eles
   elem2.classList.toggle("hiddenForm");
+  linkOut.classList.toggle("hiddenForm");
   linkIn.addEventListener("click", toggleElemClass);
-  linkOut.addEventListener("click", toggleElemClass);
-};
+  linkOut.addEventListener("click", toggleElemClass);};
 
 const validateBtn = (loginButton: HTMLButtonElement) => {
   const inputEmail = document.querySelector('#login-email') as HTMLInputElement;
@@ -56,6 +59,7 @@ const validateBtn = (loginButton: HTMLButtonElement) => {
     // se usuario estiver registrado no local storage, sera validado com if alterando a propriedade do button para false     
       const isLoginValid = login.checkInput({inputEmail, inputPassword})
       if(isLoginValid) loginButton.disabled = false
+      if(!isLoginValid) loginButton.disabled = true
   }
 
   loginButton.disabled = true;
@@ -70,10 +74,10 @@ window.onload = () => {
   const signIn = document.querySelector("#signInForm") as HTMLFormElement;
   const signUp = document.querySelector("#signUpForm") as HTMLFormElement;
   const signInLink = document.querySelector(
-    "#signInForm>a"
+    "#new"
   ) as HTMLAnchorElement;
   const signUpLink = document.querySelector(
-    "#signUpForm>a"
+    "#goback"
   ) as HTMLAnchorElement;
 
   const loginElem = document.querySelector("#login") as HTMLDivElement;

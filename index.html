@@ -7,69 +7,144 @@
     <title>Vite App</title>
   </head>
   <body>
-    <header>
-        <h1 class="header-title">Cadastro de Clientes</h1>
-    </header>
     <main id="login">
+      <div class="container">
+        <div class="logo">Oliveira trade</div>
+        <a class="button green" href="#" id="new">Novo por aqui?</a>
+        <a class="button green" href="#" id="goback">Voltar</a>
+      </div>
+      <div class="container">
         <form id="signUpForm">
-            <input id="register-name" type="text"  data-index="new" class="modal-field" placeholder="Nome Completo" required>
-            <input id="register-email" type="text" class="modal-field" placeholder="Email" required>
-            <input id="register-taxId" type="text" class="modal-field" placeholder="CPF" required>
-            <input id="register-pass" type="text" class="modal-field" placeholder="Senha" required>
-<!--             <input id="confirmPass" type="text" class="modal-field" placeholder="Confirmar Senha" required> -->
-            <button type="button" class="button blue" id="signUpButton">Criar Usuário</button>
-            <a href="#">Voltar</a>
-            </form>
-
-
-        <form id="signInForm">
-        <input id="login-email" type="text" class="modal-field" placeholder="Email" required>
-        <input id="login-password" type="text" class="modal-field" placeholder="Senha" required>
-        <button type="button" class="button blue" id="signInButton">Logar</button>
-        <a href="#">Novo por aqui?</a>
-        </form>
+            <label for="register-name">
+                Digite seu nome completo
+                <input
+              id="register-name"
+              type="text"
+              data-index="new"
+              class="modal-field"
+              placeholder="Nome Completo"
+              required
+            />
+            </label>
+            <input
+              id="register-email"
+              type="text"
+              class="modal-field"
+              placeholder="Email"
+              required
+            />
+            <input
+              id="register-taxId"
+              type="text"
+              class="modal-field"
+              placeholder="CPF"
+              required
+            />
+            <input
+              id="register-pass"
+              type="password"
+              class="modal-field"
+              placeholder="Senha"
+              required
+            />
+            <!--             <input id="confirmPass" type="text" class="modal-field" placeholder="Confirmar Senha" required> -->
+            <button type="button" class="button blue" id="signUpButton">
+              Criar Usuário
+            </button>
+          </form>
+          <form id="signInForm">
+            <input
+              id="login-email"
+              type="text"
+              class="modal-field"
+              placeholder="Email"
+              required
+            />
+            <input
+              id="login-password"
+              type="text"
+              class="modal-field"
+              placeholder="Senha"
+              required
+            />
+            <button type="button" class="button blue" id="signInButton">
+              Logar
+            </button>
+          </form>
+      </div>
     </main>
     <main id="app">
-        <button type="button" class="button blue" id="logoutButton">Logout</button>
-        <button type="button" class="button blue mobile" id="cadastrarCliente" hidden>Cadastrar Cliente</button>
-        <table id="tableClient" class="records">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>CPF</th>
-                    <th>Senha</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <header class="modal-header">
-                    <h2>Novo Cliente</h2>
-                    <span class="modal-close" id="modalClose">&#10006;</span>
-                </header>
-                <form id="form" class="modal-form">
-                    <input id="name" type="text" data-index="new" class="modal-field" placeholder="Nome Completo" required>
-                    <input id="email" type="email" class="modal-field" placeholder="E-mail" required>
-                    <input id="taxId" type="text" class="modal-field" placeholder="CPF" required>
-                    <input id="password" type="password" class="modal-field" placeholder="Senha" required>
-                </form>
-                <footer class="modal-footer">
-                    <button id="save" class="button green">Salvar</button>
-                    <button id="cancel" class="button red">Cancelar</button>
-                    <button id="forgot" class="button blue">Esqueceu a senha?</button>
-                </footer>
-            </div>
+      <header class="header">
+        <button type="button" class="button blue" id="logoutButton">
+          Logout
+        </button>
+        <button
+          type="button"
+          class="button blue mobile"
+          id="cadastrarCliente"
+          hidden
+        >
+          Cadastrar Cliente
+        </button>
+        <h1>Cadastro de cliente</h1>
+      </header>
+      <table id="tableClient" class="records">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>CPF</th>
+            <th>Senha</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h2>Novo Cliente</h2>
+            <span class="modal-close" id="modalClose">&#10006;</span>
+          </header>
+          <form id="form" class="modal-form">
+            <input
+              id="name"
+              type="text"
+              data-index="new"
+              class="modal-field"
+              placeholder="Nome Completo"
+              required
+            />
+            <input
+              id="email"
+              type="email"
+              class="modal-field"
+              placeholder="E-mail"
+              required
+            />
+            <input
+              id="taxId"
+              type="text"
+              class="modal-field"
+              placeholder="CPF"
+              required
+            />
+            <input
+              id="password"
+              type="password"
+              class="modal-field"
+              placeholder="Senha"
+              required
+            />
+          </form>
+          <footer class="modal-footer">
+            <button id="save" class="button green">Salvar</button>
+            <button id="cancel" class="button red">Cancelar</button>
+            <button id="forgot" class="button blue">Esqueceu a senha?</button>
+          </footer>
         </div>
+      </div>
     </main>
-
-    <footer>
-
-    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@ import { Client } from "./@types";
 const { readClient, createClient, updateClient, deleteClient } = localStorage;
 const { closeModal, openModal, fillFields } = modal;
 
-import { cpf } from 'cpf-cnpj-validator';
+import { cpf } from "cpf-cnpj-validator";
 
 // Validações do Form
 const isValidFields = () => {
@@ -44,13 +44,12 @@ const saveClient = () => {
       password: password.value,
     };
 
-
     // Identificando se é um novo usuario ou editar um cliente
     const index = name.dataset.index || "new";
     if (index == "new") {
       // Utilizando a função do createCliente
-      console.log('CPF sem value',taxId)
-      console.log('CPF com value',taxId.value)
+      console.log("CPF sem value", taxId);
+      console.log("CPF com value", taxId.value);
       createClient(client);
       alert("Seu usuário foi criado com sucesso!");
       updateTable();
@@ -66,7 +65,7 @@ const saveClient = () => {
 // Editando o cliente atraves da função do readClient e pedindo para carregar somente o valor do index que foi recebido no parametro, ou seja, no botao clicado correspondente da linha do cliente editado
 const editClient = (index: number) => {
   const client = readClient()[index];
-  client.index = index;
+  client.index = index.toString();
   fillFields(client);
   openModal();
 };
