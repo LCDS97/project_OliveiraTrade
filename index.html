@@ -17,19 +17,20 @@
             <input id="tax-id" type="text" class="modal-field" placeholder="CPF" required>
             <input id="user-pass" type="text" class="modal-field" placeholder="Senha" required>
             <input id="confirmPass" type="text" class="modal-field" placeholder="Confirmar Senha" required>
-            <button type="button" class="button blue" id="signInButton">Criar Usuário</button>
+            <button type="button" class="button blue" id="signUpButton">Criar Usuário</button>
             <a href="#">Voltar</a>
             </form>
 
 
         <form id="signInForm">
-        <input id="user-email" type="text" class="modal-field" placeholder="Email" required>
-        <input id="password" type="text" class="modal-field" placeholder="Senha" required>
-        <button type="button" class="button blue" id="signUpButton">Logar</button>
+        <input id="login-email" type="text" class="modal-field" placeholder="Email" required>
+        <input id="login-password" type="text" class="modal-field" placeholder="Senha" required>
+        <button type="button" class="button blue" id="signInButton">Logar</button>
         <a href="#">Novo por aqui?</a>
         </form>
     </main>
     <main id="app">
+        <button type="button" class="button blue" id="logoutButton">Logout</button>
         <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
         <table id="tableClient" class="records">
             <thead>
@@ -65,10 +66,6 @@
             </div>
         </div>
     </main>
-
-    <footer>
-
-    </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -17,8 +17,9 @@ h1 {
 
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
   font-family: "karla", sans-serif;
   position: relative;
 }

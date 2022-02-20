@@ -43,6 +43,21 @@ const toggleElements = ({ elem1, elem2, linkIn, linkOut }: ToggleElements) => {
   linkOut.addEventListener("click", toggleElemClass);
 };
 
+const validateBtn = (loginButton: HTMLButtonElement) => {
+  const inputEmail = document.querySelector('#login-email') as HTMLInputElement;
+  const inputPassword = document.querySelector('#login-password') as HTMLInputElement;
+  
+  const checkLogin =  () => {
+    // se usuario estiver registrado no local storage, sera validado com if alterando a propriedade do button para false
+    loginButton.disabled = false
+  }
+
+
+  loginButton.disabled = true;
+  inputEmail.addEventListener('input', checkLogin);
+  inputPassword.addEventListener('input', checkLogin);
+}
+
 window.onload = () => {
   addEventListeners();
   table.updateTable();
@@ -56,5 +71,13 @@ window.onload = () => {
     "#signUpForm>a"
   ) as HTMLAnchorElement;
 
+  const loginElem = document.querySelector("#login") as HTMLDivElement;
+  const appElem = document.querySelector("#app") as HTMLDivElement;
+  const loginButton = document.querySelector("#signInButton") as HTMLButtonElement;
+  const logoutButton = document.querySelector("#logoutButton") as HTMLButtonElement;
+
   toggleElements({elem1: signIn, elem2: signUp, linkIn: signInLink, linkOut: signUpLink});
+  validateBtn(loginButton);
+
+  toggleElements({elem1: loginElem, elem2: appElem, linkIn: loginButton, linkOut: logoutButton});
 };
