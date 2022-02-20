@@ -57,7 +57,7 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 
 ### :eyes: Curiosidades
 
-Estou desde setembro estudando a plataforma do Salesforce, caso queira da uma olhada no meu perfil do Trailhead 😉
+Estou desde setembro estudando a plataforma do Salesforce, caso queira da uma olhada no meu perfil do [Trailhead](https://trailblazer.me/id/lcds1997) 😉
 ![Trailhead](assets/TrailheadProfile.png)
 
 
