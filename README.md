@@ -63,8 +63,8 @@ Nesse projeto foi desenvolvido uma página de SignIn/SignUp para a empresa fict�
 ### 
 
 ### :eyes: Formas de me encontrar
-:checkered_flag: Meu Linkedin [Linkedin](https://www.linkedin.com/in/lucas-conceição-dos-santos-52481216b/)
-:checkered_flag: Também estudando a plataforma do **Salesforce**, caso queira da uma olhada no meu perfil do [Trailhead](https://trailblazer.me/id/lcds1997)😉
+:large_blue_diamond: [Linkedin](https://www.linkedin.com/in/lucas-conceição-dos-santos-52481216b/)
+:large_blue_diamond: [Trailhead](https://trailblazer.me/id/lcds1997)
 ---
 ![Trailhead](assets/TrailheadProfile.png)
 

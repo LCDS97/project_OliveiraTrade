@@ -5,13 +5,9 @@ import "./css/records.css";
 import "./css/login.css";
 
 import { modal, table, register, login } from "./scripts";
+import { ToggleElements } from "./scripts/@types";
 
-interface ToggleElements {
-  elem1: HTMLFormElement | HTMLDivElement;
-  elem2: HTMLFormElement | HTMLDivElement;
-  linkIn: HTMLAnchorElement | HTMLButtonElement;
-  linkOut: HTMLAnchorElement | HTMLButtonElement;
-}
+
 
 const addEventListeners = () => {
   const createClient = document.getElementById(
