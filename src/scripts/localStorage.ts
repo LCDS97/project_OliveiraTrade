@@ -3,7 +3,7 @@ import { Client } from "./@types";
 // Funções de Conversões do localStorage
 // Get - Transformar de string para Array
 const getLocalStorage = () =>
-  JSON.parse(localStorage.getItem("db_client") || "[]");
+  JSON.parse(localStorage.getItem("db_client") || "[]"); 
 // Set - Transformar de Array para String
 const setLocalStorage = (dbClient: Client[]) =>
   localStorage.setItem("db_client", JSON.stringify(dbClient));

@@ -11,4 +11,11 @@ type CheckInput = {
     inputPassword: HTMLInputElement
 }
 
-export { Client, CheckInput }
+type ToggleElements = {
+    elem1: HTMLFormElement | HTMLDivElement;
+    elem2: HTMLFormElement | HTMLDivElement;
+    linkIn: HTMLAnchorElement | HTMLButtonElement;
+    linkOut: HTMLAnchorElement | HTMLButtonElement;
+  }
+
+export { Client, CheckInput, ToggleElements }
